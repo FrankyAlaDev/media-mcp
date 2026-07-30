@@ -89,7 +89,7 @@ def _arr_headers(api_key: str) -> dict:
 
 
 def _jellyfin_params() -> dict:
-    return {"api_key": JELLYFIN_API_KEY}
+    return {"ApiKey": JELLYFIN_API_KEY}
 
 
 def _status_message(resp: requests.Response, context: str = "") -> str:
