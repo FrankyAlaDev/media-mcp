@@ -301,7 +301,7 @@ def library_recently_added(limit: int = 10) -> str:
         "Fields": "DateCreated,Overview",
     }
     
-    resp = requests.get(f"http://192.168.50.56:8096/Items",
+    resp = requests.get(f"{JELLYFIN_URL}/ItemS",
                         params=params, timeout=TIMEOUT)
     if resp.status_code != 200:
         return _status_message(resp, "library")
