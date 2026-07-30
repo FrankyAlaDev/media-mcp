@@ -301,7 +301,7 @@ def library_recently_added(limit: int = 10) -> str:
         "Fields": "DateCreated,Overview",
     }
     
-    resp = requests.get(f"{JELLYFIN_URL}/ItemS",
+    resp = requests.get(f"{JELLYFIN_URL}/Items",
                         params=params, timeout=TIMEOUT)
     if resp.status_code != 200:
         return _status_message(resp, "library")
