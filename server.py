@@ -300,6 +300,7 @@ def library_recently_added(limit: int = 10) -> str:
         "Recursive": "true",
         "Fields": "DateCreated,Overview",
     }
+    print(f"Fetching recently added items from Jellyfin: {JELLYFIN_URL}/Items with params {params}")
     resp = requests.get(f"{JELLYFIN_URL}/Items",
                         params=params, timeout=TIMEOUT)
     if resp.status_code != 200:
